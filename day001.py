@@ -92,6 +92,9 @@ print('我的年龄是：%d'%age1)#%r可以代表任意数据类型 %s 字符串
     output = ' '.join(inputWords)
 
     return output
+list = [ 'abcd', 786 , 2.23, 'runoob', 70.2 ]
+print (list[1:3])       # 从第二个开始输出到第三个元素
+# 获得结果 [786, 2.23]
 
 
 if __name__ == "__main__":
