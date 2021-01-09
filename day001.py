@@ -157,4 +157,5 @@ namelist.insert(3,'as5')#在列表中插入元素
 print(namelist)
 namelist.append('as3')#给列表增加元素
 print(namelist)'''
+111
 
