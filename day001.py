@@ -132,3 +132,29 @@ print(type(test(1,2,3,4)))'''
         print(c)
         #如果调用函数试试的话，会发现函数会将d的所有键打印出来;
         #也就是遍历的是d的键，而不是值.'''
+'''a = 60  # 60 = 0011 1100
+b = 13  # 13 = 0000 1101
+c = 0
+
+c = a & b  # 12 = 0000 1100
+print("1 - c 的值为：", c)'''
+'''name='Long'
+name1=name.title()
+name2=name.upper()
+name3=name.lower()
+print(name1,name2,name3)
+
+str="Longwj Say ,“Apersonwho never madea mistake never tried anything new.”"
+print(str)
+str1="\n longwj   "
+print(str1)
+print(str1.lstrip())
+print(str1.rstrip())
+print(str1.strip())'''
+
+'''namelist=['as1','as2']
+namelist.insert(3,'as5')#在列表中插入元素
+print(namelist)
+namelist.append('as3')#给列表增加元素
+print(namelist)'''
+
