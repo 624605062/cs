@@ -157,5 +157,75 @@ namelist.insert(3,'as5')#在列表中插入元素
 print(namelist)
 namelist.append('as3')#给列表增加元素
 print(namelist)'''
-111
 
+'''namelist=['a1','a2','a3','a4']
+namepop=namelist.pop()#默认弹出末尾的值 从列表删除后依然可以弹出使用
+namepop2=namelist.pop(2)
+print("很遗憾：",namepop,"我们无法邀请你来参加晚宴")
+print("很遗憾：",namepop2,"我们无法邀请你来参加晚宴")
+namelist2=namelist.remove('a1','a2')#删除列表中的元素
+print(namelist2)'''
+
+'''namelist=['c1','d2','b3','a4']
+namelist.sort()#字母顺序进行排序
+print(namelist)
+namelist2=['c1','a2','b3','d4']
+namelist2.sort(reverse=True)#反方向排序
+print(namelist2)'''
+
+'''cars = ['bmw', 'audi', 'toyota', 'subaru']
+print("Here is the original list:")
+print(cars)
+print("\nHere is the sorted list:")
+print(sorted(cars))#临时将列表进行排序操作 此操作是临时的 
+print("\nHere is the original list again:")
+print(cars)'''
+
+'''cars = ['bmw', 'audi', 'toyota', 'subaru']
+len1=len(cars)# 确定列表的长度 使用函数len() 可快速获悉列表的长度
+print(len1)
+print(cars)
+cars.reverse()#反向打印       reverse() 不是指按与字母顺序相反的顺序排列列表元素，而只是反转列表元素的排列顺序：
+print(cars)'''
+
+'''wanttogo=["beijin","changsha","ai"]
+print(wanttogo)
+wanttogo1=sorted(wanttogo)
+print(wanttogo1)
+wanttogo2=wanttogo1
+wanttogo2.reverse()
+print(wanttogo2)
+print(wanttogo)
+wanttogo.sort()
+print(wanttogo)'''
+
+
+'''gsname=['hh','zj','xzq']
+for gsnames in gsname:
+    print(gsnames)'''
+
+'''squares = []
+for value in range(1,11):
+    square = value**2
+    squares.append(square)
+print(squares)'''
+'''sz=[]
+for value in range(1,100000):
+    sz.append(value)
+print(sz)
+max1=max(sz)
+print(max1)'''
+
+'''numbers=list(range(3,30,3))
+print(numbers)
+for number in numbers:
+    print(number)
+'''
+'''numbers=[number**3 for number in range(1,11)]
+print(numbers)
+szu=[]
+numbers=list(range(1,11))
+for number in numbers:
+    sz=number**3
+    szu.append(sz)
+print(szu)'''
