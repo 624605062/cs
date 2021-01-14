@@ -229,3 +229,83 @@ for number in numbers:
     sz=number**3
     szu.append(sz)
 print(szu)'''
+
+'''sz=[value**2 for value in range(0,11,2)]
+print(sz)'''
+'''cslist=['a','b','c']
+for cs in cslist[:2]:#遍历输出切片
+    print(cs)
+print(cslist[2:3])#切片输出
+cs2list=cslist[:]#复制整个列表
+cs2list.append('d')#复制的列表中添加元素
+print(cs2list)'''
+
+############################元组
+'''dimensions = (200, 50)#定义元组
+print("遍历元组:")
+for dimension in dimensions:#元组的遍历
+    print(dimension)
+dimensions=(400,100)
+print("\n修改元组变量")
+for dimension in dimensions:
+    print(dimension)'''
+
+    ########################if语句
+
+'''cars = ['audi', 'bmw', 'subaru', 'toyota']
+for car in cars:
+    if car=="bmw":#先检查当前的汽车名是否是'bmw'
+        print(car.upper())
+    else:
+        print(car.title())'''
+
+'''age=18
+if age>=18:
+    print("已成年")
+else:
+    print("未成年")
+'''
+
+'''cslist=['a','b','c']
+if 'a' not in cslist:#判断在不在列表中
+    print("存在")
+else:
+    print("不存在")'''
+
+'''car = 'subaru'
+print("Is car == 'subaru'? I predict True.")
+print(car == 'subaru')
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')'''
+####练习
+'''str1="bmw"
+str2="Bmw"
+if str1==str2:#检查两个字符串相等和不等
+    print("一样")
+else:
+    print('不一样')'''
+
+'''sz1=52
+sz2=52
+if sz1 and sz2 >=10:
+    print('大于10')
+else:
+    print('小于10')'''
+'''if sz2 or sz1 <=50:
+    print('大于50')
+else:
+    print('小与50')'''
+
+#if elif else 语句
+'''age=19
+if age<=18:
+    print('少年')
+elif age<=28:
+    print('青年')
+else:
+    print('老年')'''
+'''wxr='creen'
+if wxr=='green':
+    print('获得5分')
+else:
+    print('获得10分')'''
