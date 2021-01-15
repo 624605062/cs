@@ -309,3 +309,114 @@ if wxr=='green':
     print('获得5分')
 else:
     print('获得10分')'''
+'''names=['a']
+if names:
+    for name in names:#遍历每一位成员
+        print("存在个用户")
+else:
+    print("没有用户")'''
+'''if name=='admin':#判断是不是管理员
+        print(name+"你好管理员")
+    else:
+        print(name+'你好')
+    if name1:
+        print("没有用户")
+    else:
+        print("存在"+len(name1)+",个用户")'''
+
+'''current_users=['a','b','c','d']
+new_users=[1,2,3,4,'a','b']
+for new_user in new_users:
+    if new_user in current_users:
+        print(new_user+'用户已存在')
+    else:
+        print("可以使用")'''
+
+'''numbers=[1,2,3,4,5,6,7,8,9]
+for number in numbers:
+    int=number
+    if number==1:
+        print(str(number)+"st")#在循环中使用一个if-elif-else 结构，以打印每个数字对应的序数。输出内容应为1st 、2nd 、3rd 、4th 、5th 、6th 、7th 、8th 和9th ，但每个序
+数都独占一行。
+
+    elif number==2:
+        print(str(number)+'nd')
+    elif number==3:
+        print(str(number)+'rd')
+    else:
+        print(str(number)+'th')'''
+
+
+#########################字典
+'''zidian={}
+zidian['a']=1
+zidian['b']=2
+zidian['a']=20
+print(zidian)
+del zidian['a']
+print(zidian)'''
+#遍历字典中的数据
+
+'''user_0 = {
+'username': 'efermi',
+'first': 'enrico',
+'last': 'fermi',
+}
+for key,value in user_0.items():#将遍历的它返回一个键—值对列表
+    print("\nKey:"+key)
+    print("Value:"+value)'''
+'''favorite_languages = {
+'jen': 'python',
+'sarah': 'c',
+'edward': 'ruby',
+'phil': 'python',
+}
+friends = ['phil', 'sarah']
+for name in favorite_languages.keys():
+    print(name.title())
+    if name in friends:
+        print(" Hi " + name.title() +
+", I see your favorite language is " + favorite_languages[name].title() + "!")
+'''
+'''favorite_languages = {
+'jen': 'python',
+'sarah': 'c',
+'edward': 'ruby',
+'phil': 'python',
+}
+for language in set(favorite_languages.values()):#使用集合去重复保证值的独一无二
+    print(language.title())
+
+for name in sorted(favorite_languages.keys()):#顺序排序遍历字典中的键
+    print(name)'''
+
+##练习
+'''heliu={'nile':'egypt',
+        'dahe':'laile',
+       'nih':'hhhj',
+        }
+for hl in heliu.values():
+    print(hl)
+#for hl in heliu.keys():
+  #  print(str(hl)+'The Nileruns throughEgypt')'''
+####嵌套
+# 创建一个用于存储外星人的空列表
+'''aliens = []
+# 创建30个绿色的外星人
+for alien_number in range (0,30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+#print(aliens[0:3])
+for alien in aliens[0:3]:
+    if alien['color']=='green':
+        alien['color']='yellow'
+        alien['points']=10
+        alien['speed']='fast'
+for alien in aliens[0:5]:
+    print(alien)
+print('....')'''
+
+
+
+
+
