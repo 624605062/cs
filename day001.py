@@ -416,6 +416,58 @@ for alien in aliens[0:5]:
     print(alien)
 print('....')'''
 
+'''pizza = {
+'crust': 'thick',
+'toppings': ['mushrooms', 'extra cheese'],
+}
+for pizzas in pizza['toppings']:#遍历字典中的列表
+    print(pizzas)'''
+#元组中嵌套元组
+'''users = {
+'aeinstein': {
+'first': 'albert',
+'last': 'einstein',
+'location': 'princeton',
+},
+'mcurie': {
+'first': 'marie',
+'last': 'curie',
+'location': 'paris',
+},
+}
+for username, user_info in users.items():#循环遍历键和值 存在在变量username, user_info中
+    print("\nUsername: " + username)#输出键
+    full_name = user_info['first'] + " " + user_info['last']#定义变量 full_name，其中包含user_info['first']user_info['last']的值
+    location = user_info['location']#定义变量包含user_info['location']的值
+print("\tFull name: " + full_name.title())
+print("\tLocation: " + location.title())'''
+
+####练习
+#：创建多个字典，对于每个字典，都使用一个宠物的名称来给它命名；在每个字典中，包含宠物的类型及其主人的名字。将这些字典存储在一个名为pets 的列表中，再遍历该列表，并将宠物的所有信息都打印出来。
+'''cat={"name":'james','leixi':'maomi'}
+dog={"name":'ali','leixi':'go'}
+monkey={"name":'mrst','leixi':'houzi'}
+dongwus=[cat,dog,monkey]#将字典放在列表中
+for dongwu in dongwus:
+    for dwn,dwlx in dongwu.items():
+        print(dwn+dwlx)'''
+# ：创建一个名为favorite_places 的字典。在这个字典中，将三个人的名字用作键；对于其中的每个人，都存储他喜欢的1~3个地方。为让这个练习更有趣些，可让一些朋友指出他们喜欢的几个地方。遍历这个字典，并将其中每个人的名字及其喜欢的地方打印出来。
+
+'''favorite_places={'james':['beij','changsha','wuhan'],
+                 'aili':['nanc','shanghai','chongq'],
+                 }
+for k,v in favorite_places.items():#遍历人名 和列表
+    print(k)
+    for i in v:#遍历列表
+        print("\t%s" % i)'''
+
+'''cities={'nanchang':{'renkou':'50万','chepai':'赣A'},
+        'shanghai':{'人口':'100万','chepai':'沪A'},
+        }
+for k,v in cities.items():
+    print(k)
+    for key,values in v.items():
+        print(key+':'+values)'''
 
 
 
