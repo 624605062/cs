@@ -472,3 +472,57 @@ for k,v in cities.items():
 
 
 
+#####用户输入和while 循环
+'''username=input("请输入用户名；")
+password=input("请输入密码：")
+if username=='cs':
+    password=='123'
+    print('登录成功')
+else:
+    print('登录失败')'''
+
+'''number=input("请输入数字：")
+number=int(number)
+if number %2==0:
+    print('是偶数')
+else:
+    print('是奇数')'''
+'''number=1
+while number <=100:#循环到100次
+    print(number)
+    number +=1#每次循环都自增1  +1'''
+
+'''prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program. "
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    print(message)'''
+
+######练习
+'''pisa='请输入你想要的披萨材料：'
+
+while pisa:
+    pisas=input(pisa)
+    if pisas=='quit':
+        break
+    else:
+        print("我们会为你添加："+str(pisas)+'的')'''
+'''pj=input("请输入你的年龄：")
+pj=int(pj)
+while pj:
+    if pj <= 3:
+        print('免费')
+        break
+    elif pj<=12:
+        print('10元')
+        break
+    else:
+        print('12元')
+        break'''
+
+
+
+
+
+
