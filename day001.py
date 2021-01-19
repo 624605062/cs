@@ -510,8 +510,8 @@ while pisa:
         print("我们会为你添加："+str(pisas)+'的')'''
 '''pj=input("请输入你的年龄：")
 pj=int(pj)
-while pj:
-    if pj <= 3:
+while pj:#循环用户输入
+    if pj <= 3:#对用户输入进行判断
         print('免费')
         break
     elif pj<=12:
@@ -520,9 +520,67 @@ while pj:
     else:
         print('12元')
         break'''
+######## 使用while 循环来处理列表和字典
+'''yz_users=['long','he','liu']#创建一个待验证的列表
+yzcg_users=[]#创建一个存放验证过了的列表
+while yz_users:#循环验证待验证列表
+    yz_user=yz_users.pop()#每次循环验证 都弹出该用户
+    print('验证的用户名为：'+yz_user)
+    yzcg_users.append(yz_user)#验证后添加到空列表中
+print("显示所有已验证的用户：")
+for yzcg_user in yzcg_users:#遍历已经验证的用户
+    print(yzcg_user.title())'''
 
 
+###假设你有一个宠物列表，其中包含多个值为'cat' 的元素。要删除所有这些元素，可不断运行一个while 循环，直到列表中不再包含值'cat' ，如下所示：
 
+'''dongwu=['cat','dog','mokeny','cat']
+print(dongwu)
+while 'cat' in dongwu:
+    dongwu.remove('cat')
+print(dongwu)'''
+####使用用户输入来填充字典
+##可使用while循环提示用户输入任意数量的信息。下面来创建一个调查程序，其中的循环每次执行
+# 时都提示输入被调查者的名字和回答。我们将收集的数据存储在一个字典中，以便将回答同被调查者关联起来：
+'''responses = {}
+# 设置一个标志，指出调查是否继续
+polling_active = True
+while polling_active:
+# 提示输入被调查者的名字和回答
+    name = input("\nWhat is your name? ")
+    response = input("Which mountain would you like to climb someday? ")
+# 将答卷存储在字典中
+    responses[name] =response
+# 看看是否还有人要参与调查
+    repeat = input("Would you like to let another person respond? (yes/ no) ")
+    if repeat == 'no':
+        polling_active = False
+# 调查结束，显示结果
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(name + " would like to climb " + response + ".")'''
+#########练习
+'''sandwich_orders=['pastrami','a1','a2','a3','pastrami']
+finished_sandwiches=[]
+while sandwich_orders:
+    sandwich_order=sandwich_orders.pop()#循环弹出
+    print('I made your tuna sandwich'+sandwich_order)
+    finished_sandwiches.append(sandwich_order)#弹出的值添加到空列表
+for cs in finished_sandwiches:
+    print(cs)'''
 
-
+'''sandwich_orders=['pastrami','a1','a2','a3','pastrami']
+finishs=[]
+biao=True
+print('五香牛肉都卖完了')
+while 'pastrami' in sandwich_orders:
+    sandwich_orders.remove('pastrami')
+    finishs.append(sandwich_orders)
+for f in finishs:
+    print(f)'''
+###################函数的定义
+'''def greet_user():######定义一个函数
+    "你好吗"
+    print('hello')
+greet_user()'''
 
