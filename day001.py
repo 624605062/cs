@@ -584,3 +584,43 @@ for f in finishs:
     print('hello')
 greet_user()'''
 
+
+##################实参和形参
+'''def user_cs(username):###username是形参
+    print('hello')
+user_cs('kall')#实参'''
+
+###############练习
+'''def make_shirt(cm,zy='I love Python'):
+    print('\n你选择的尺码是：'+cm)
+    print('\n你选择的字样是：'+zy)
+make_shirt('L')
+make_shirt(cm='xl')
+make_shirt(cm='XXXL',zy='Fuck')'''
+
+'''def describe_city(name,conture='China'):
+    print(name+' is in the '+conture)
+describe_city('changsha')
+describe_city(name='nanchang')
+describe_city(name='dongjin',conture='japen')'''
+
+
+'''def get_name(first_name,last_name):
+    full_name=first_name+' '+last_name
+    return full_name.title()
+name=get_name('long','wenjie')
+print(name)'''
+
+'''def get_name(first_name, last_name, mid_name=''):
+    if mid_name:#判断mid_name为ture也就是有数据
+        full_name=first_name+' '+mid_name+' '+last_name
+    else:
+        full_name=first_name+' '+last_name
+     return full_name#将值返回导函数
+name=get_name('long','wen','jie')
+print(name)
+names=get_name('long','wenjie')
+print(names)'''
+
+
+
