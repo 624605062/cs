@@ -622,5 +622,92 @@ print(name)
 names=get_name('long','wenjie')
 print(names)'''
 
+##################返回字典
+'''def user_name(first,last,age=''):
+    name={'firstname':first,'lastname':last}#定义函数值所在的字典
+    if age:
+        name['age']=age
+    return name
+names=user_name('long','wenjie',age=18)
+print(names)'''
+
+'''def get_name(first_name,last_name):
+    full_name=first_name+' '+last_name
+    return full_name.title()
+while True:
+    print('\n请输入你的名字：')
+    print('输入q退出')
+    f_name=input('你的姓：')
+    if f_name=='q':
+        break
+    l_name=input('你的名：')
+    if l_name=='q':
+        break
+    name=get_name(f_name,l_name)
+    print('\n你好！'+name)'''
+##########练习
+'''def city_country(city,gj):
+    print(city+' '+gj)
+
+city_country('changsha','zg')'''
+
+'''def make_album(gs_name,zhuanji_name,gqs=''):
+    full_name={'gs':gs_name,'zj':zhuanji_name}
+    full_name['gqs']=gqs
+    return full_name
+while True:
+    print('请输入你的数据：')
+    print('按q退出')
+    gss=input('\n请输入你喜欢的歌手名称： ')
+    if gss=='q':
+        break
+    zjs=input('\n请输入他的专辑： ')
+    if zjs=='q':
+        break
+    gq=input('\n请输入歌曲数： ')
+    if gq=='q':
+        break
+    name=make_album(gss,zjs,gq)
+    print(name)'''
+
+########传递列表
+
+'''def get_name(names):#定义一个函数包含形参
+    for name in names:遍历参数 
+        msg='hello,'+name.title()
+        print(msg)
+user_name=['long','wen','jie']#定义一个列表
+get_name(user_name)#调用函数方法 循环遍历列表的值'''
+
+
+'''def print_models(unprinted_designs,completed_models):
+    """ 模拟打印每个设计，直到没有未打印的设计为止
+    打印每个设计后，都将其移到列表completed_models中
+    """
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print('打印的模型为：'+current_design)
+        completed_models.append(current_design)
+def show_completed_models(completed_models):
+    """显示打印好的所有模型"""
+    print('\n打印好的模型为：')
+    for completed_model in completed_models:
+        print(completed_model)
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+print_models(unprinted_designs[:], completed_models)#，如果不想清空未打印的设计列表 可以切片保存副本
+print(unprinted_designs)
+show_completed_models(completed_models)'''
+
+
+#####练习
+'''mss = ['long', 'wen', 'jie']
+def show_magicians(names):
+    for name in names:
+        print(name)
+show_magicians(mss)
+def make_great(ziyang='Grea'):
+'''
+
 
 
