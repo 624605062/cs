@@ -701,13 +701,73 @@ show_completed_models(completed_models)'''
 
 
 #####练习
-'''mss = ['long', 'wen', 'jie']
-def show_magicians(names):
+
+'''def show_magicians(names):
     for name in names:
         print(name)
-show_magicians(mss)
-def make_great(ziyang='Grea'):
-'''
+def make_great(addnames,names):
+
+    while addnames:
+        add='尊敬的魔术师： '+' '+addnames.pop()
+        names.append(add)
+    return names
+mss = ['long', 'wen', 'jie']
+n=[]
+make_great(mss[:],n)
+show_magicians(n)
+show_magicians(mss)'''
+########################传递任意数量的实参
+
+'''def make_pizza(*topps):#  *topps 表示让函数创建了一个元组 不管输入多少个值都将包含在中国元组中
+    print('您选择的配料：')
+    for topp in topps:
+        print(topp)
+make_pizza('火腿','芝士','蔬菜')'''
+
+##########结合使用位置实参和任意数量实参
+
+'''def make_pizza(size, *toppings):
+    print("\nMaking a " + str(size) +
+        "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')'''
 
 
+'''def build_profile(first,last,**user_info):#两个星号让Python创建一个名为user_info 的空字典，并将收到的所有名称—值对都封装到这个字典中。
+    profile={}#我们创建了一个名为profile 的空字典，用于存储用户简介
+    profile['first_name']=first#字典中的key 对应的vlue
+    profile['last_name']=last
+    for k,y in user_info.items():#遍历字典
+        profile[k]=y#并将每个键—值对都加入到字典profile 中。
+        return profile
+user_profile = build_profile('albert', 'einstein',
+location='princeton',
+field='physics')
+print(user_profile)'''
+###############练习
+'''def make_pizzas(*fulls):
+    print('添加的配料：')
+    for full in fulls:
+        print(full)
+pizzs=make_pizzas('火腿肠','鸡蛋')'''
+
+'''def cars_name(name,pinp,**full):
+    car={}
+    car['name']=name
+    car['pinp']=pinp
+    for k,y in full.items():
+        car[k]=y
+    return car
+cars=cars_name('兰博基尼LP700','大牛',color='yellow',
+               ccs='一百万')
+print(cars)'''
+
+'''import pizz
+pizz.make_pizzas('火腿肠','鸡蛋')'''
+
+'''from  pizz import cars_name 
+user= cars_name('本田','跑车',color='blue',css=100)
+print(user)'''
 
