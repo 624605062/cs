@@ -469,7 +469,12 @@ for k,v in cities.items():
     for key,values in v.items():
         print(key+':'+values)'''
 
-
+'''n=0
+while n < 10:
+    n+=1
+    if n %2 == 0:
+        continue#忽略对2取余=0的数 也就是忽略偶数
+    print(n)'''
 
 
 #####用户输入和while 循环
@@ -771,3 +776,120 @@ pizz.make_pizzas('火腿肠','鸡蛋')'''
 user= cars_name('本田','跑车',color='blue',css=100)
 print(user)'''
 
+##################类 class
+'''class Dog():
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def sit(self):
+        print(self.name.title()+'is now sitting')
+    def roll_over(self):
+        print(self.name.title()+'rolled over!')'''
+'''class Dog():
+    """一次模拟小狗的简单尝试"""
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def sit(self):
+
+        print(self.name.title() + " 是一只狗狗.")
+    def roll_over(self):
+
+        print(self.name.title() + " 给我坐下!")'''
+
+
+'''class Dog():
+    my_dog=Dog('willie', 6)
+    print("My dog's name is " + my_dog.name.title() + ".")
+    print("My dog is " + str(my_dog.age) + " years old.")'''
+'''class Dog():
+    my_dog=Dog('kall',20)
+    my_dog.sit()
+    my_dog.roll_over()'''
+################练习
+'''class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name=restaurant_name
+        self.cuisine_type=cuisine_type
+    def describe_restaurant(self):
+        print(self.restaurant_name)
+        print('营业时间为：'+str(self.cuisine_type)+'点!')
+    def open_restaurant(self):
+        print('正在营业')
+class Restaurant():
+    my_restaurant=Restaurant('和平饭店','10:00-22:00')
+    your_restaurant=Restaurant('寻味四级','11:00-23:00')
+    our_restaurant=Restaurant('全聚德','10:00-22:00')
+    my_restaurant.describe_restaurant()
+    my_restaurant.open_restaurant()
+    your_restaurant.describe_restaurant()
+    our_restaurant.describe_restaurant()'''
+
+'''class User():
+    def __init__(self,first_name,last_name,):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.full=full
+    def describe_user(self):
+        print('你好：'+self.first_name+self.last_name)
+    def greet_user(self):
+        print('尊敬的：'+self.first_name+'你好!')
+user=User('long','wenjie')
+user.describe_user()
+user.greet_user()'''
+#####使用类和实例
+'''class Cars():
+    def __init__(self,make,model,year):#定义了方法__init__()
+        self.make=make
+        self.model=model
+        self.year=year
+    def get_our_name(self):
+        full_name=str(self.year)+' '+self.make+' '+self.model
+        return  full_name
+my_car=Cars('audi','R8','2020')
+print(my_car.get_our_name())'''
+###############练习
+
+'''class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name=restaurant_name
+        self.cuisine_type=cuisine_type
+        self.number_served=0
+    def get_number_served(self):
+        print(str(self.number_served)+'人')
+    def increment_number_served(self,rs):
+        self.number_served +=rs
+    def describe_restaurant(self):
+        print(self.restaurant_name)
+        print('营业时间为：'+str(self.cuisine_type)+'点!')
+    def open_restaurant(self):
+        print('正在营业')
+my_restaurant=Restaurant('和平饭店','10:00-22:00')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+my_restaurant.number_served=20
+my_restaurant.get_number_served()
+my_restaurant.increment_number_served(20)
+my_restaurant.get_number_served()'''
+
+
+'''class User():
+    def __init__(self,first_name,last_name,):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.login_attempts=0
+    def increment_login_attempts(self):
+        self.login_attempts+=1
+    def reset_login_attempts(self):
+        self.login_attempts=0
+    def describe_user(self):
+        print('你好：'+self.first_name+self.last_name)
+    def greet_user(self):
+        print('尊敬的：'+self.first_name+'你好!')
+user=User('Tony','Stark')
+user.describe_user()
+for n in range(5):
+    user.increment_login_attempts()
+print(user.login_attempts)
+user.reset_login_attempts()
+print(user.login_attempts)'''
