@@ -893,3 +893,53 @@ for n in range(5):
 print(user.login_attempts)
 user.reset_login_attempts()
 print(user.login_attempts)'''
+
+'''class add_user():
+    def __init__(self,user_name,user_password):
+        self.user_name=user_name
+        self.user_password=user_password
+
+    def user_init(self):
+        user_n=input('请输入账户：')
+        user_p=input('请输入密码：')
+        if self.user_name==user_n and self.user_password==user_p:
+            print('登录成功')
+        else:
+            print('登录失败')
+
+user=add_user('root','123')
+user.user_init()'''
+
+'''class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    def get_descriptive_name(self):
+        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return long_name.title()
+    def read_odometer(self):
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+
+class ElectricCar(Car):###继承Car类的方法
+    def __init__(self,make,model,year):#方法__init__() 接受创建Car 实例所需的信息
+        super().__init__(make,model,year)#处的super() 是一个特殊函数，帮助Python将父类和子类关联起来。这行代码让Python调用ElectricCar 的父类的方法__init__() ，让ElectricCar 实例包含父类的所有属性。
+        self.battery_size=100
+    def describe_battery(self):#给子类定义一个新方法
+        print('这个汽车的电池容量为：'+str(self.battery_size)+'千瓦')
+my_car=ElectricCar('testla','model','2020')
+print(my_car.get_descriptive_name())
+my_car.describe_battery()'''
+
+
+
+
