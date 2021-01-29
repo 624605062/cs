@@ -939,7 +939,55 @@ class ElectricCar(Car):###继承Car类的方法
 my_car=ElectricCar('testla','model','2020')
 print(my_car.get_descriptive_name())
 my_car.describe_battery()'''
+############练习
+'''class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name=restaurant_name
+        self.cuisine_type=cuisine_type
+        self.number_served=0
+    def get_number_served(self):
+        print(str(self.number_served)+'人')
+    def increment_number_served(self,rs):
+        self.number_served +=rs
+    def describe_restaurant(self):
+        print(self.restaurant_name)
+        print('营业时间为：'+str(self.cuisine_type)+'点!')
+    def open_restaurant(self):
+        print('正在营业')
+class IceCreamStand(Restaurant):
+    def __init__(self,name,cuisine_type='ice_cream'):
+        super().__init__(name,cuisine_type)
+        self.flavors=[]
+    def show_ice(self):
+        for icer in self.flavors:
+            print(icer)
+IceCreamStands=IceCreamStand('s')
+IceCreamStands.flavors=['a','b']
+IceCreamStands.describe_restaurant()
+IceCreamStands.show_ice()'''
 
-
+'''class User():
+    def __init__(self,first_name,last_name,):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.login_attempts=0
+    def increment_login_attempts(self):
+        self.login_attempts+=1
+    def reset_login_attempts(self):
+        self.login_attempts=0
+    def describe_user(self):
+        print('你好：'+self.first_name+self.last_name)
+    def greet_user(self):
+        print('尊敬的：'+self.first_name+'你好!')
+class Admin(User):
+    def __init__(self,first_name,last_name):
+        super().__init__(first_name,last_name)
+        self.privileges=['can add post','can delete post','can ban user']
+    def show_privileges(self):
+        for qx in self.privileges:
+            print('你的权限为: '+str(qx))
+admin=Admin('long','wenjie')
+admin.greet_user()
+admin.show_privileges()'''
 
 
