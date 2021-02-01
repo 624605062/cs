@@ -990,4 +990,77 @@ admin=Admin('long','wenjie')
 admin.greet_user()
 admin.show_privileges()'''
 
+###########导入类
+'''import Car
+my_car=ElectricCar('testla','model','2020')
+print(my_car.get_descriptive_name())
+my_car.describe_battery()'''
+'''from Car import ElectricCar
+my_car=ElectricCar('testla','model','2020')
+print(my_car.get_descriptive_name())
+my_car.describe_battery()'''
 
+'''from user import  User
+from admin import Admin
+name=Admin('long','wenjie')
+name.show_privileges()'''
+'''from collections import OrderedDict
+favorite_languages=OrderedDict()
+favorite_languages['jen'] = 'python'
+favorite_languages['sarah'] = 'c'
+favorite_languages['edward'] = 'ruby'
+favorite_languages['phil'] = 'python'
+for name,languages in favorite_languages.items():
+    print(name.title()+'喜欢的语言是'+languages.title())'''
+
+##########练习
+'''from random import randint
+
+class Die():
+    def __init__(self,sides='6'):###初始化 筛子6个面
+        self.sides=sides
+    def roll_die(self):#定义一个方法
+        for n in range(11):#循环10个数
+            print(randint(1,eval(self.sides)),end=' ')
+        print(' ')'''
+
+################文件和异常
+#关键字with 在不再需要访问文件后将其关闭。
+'''with open('pi_digits') as  file_object:#打开文件  函数open()接受参数为打开文件的名称 as  file_object返回在我们所设置的变量中
+    contents=file_object.read()#使用read()方法读取数据并存放在contents变量中
+    print(contents.rstrip())#rstrip()方法删除末尾的空行'''
+'''pi_string=''#定义一个空变量
+for line in contents:#遍历整个文件的值
+    pi_string+=line.rstrip()#将遍历的行数 赋值给pi_string
+print(pi_string)
+print(len(pi_string)'''
+'''with open('txt_files/filename') as file_name:#使用绝对路径打开文件
+    file_read=file_name.read()
+    print(file_read.rstrip())'''
+'''open_file='D:/aaaa/admin/cs.txt'##读取电脑中的文件
+with open(open_file) as bugtxt:
+    txtread=bugtxt.read()
+    print(txtread)'''
+'''file_read='txt_files/filename'
+with open(file_read) as file_object:#打开文件
+    lines=file_object.read()#读取文本
+pi_string=''
+for line in lines:#遍历数据
+    pi_string+=line.strip()#清除空行后将数据存储在pi_string中
+#print(pi_string[:52])#输出前52位
+#print(len(pi_string))
+birthday=input('请输入你的生日：')
+if birthday in line:
+    print("你的生日在此文件中")
+else:
+    print('你的生日不存在该文件中')'''
+
+################练习
+'''file_read='txt_files/filename'
+with open(file_read) as file_object:
+    lines=file_object.read()
+pi_file=''
+for line in lines:
+    pi_file+=line.rstrip()
+pi_file.replace('fly','down')
+print(pi_file)'''
