@@ -1064,3 +1064,90 @@ for line in lines:
     pi_file+=line.rstrip()
 pi_file.replace('fly','down')
 print(pi_file)'''
+#文件写入
+'''filename='pi_digits'
+with open(filename,'w') as file_object:#第二个实参（'w' ）告诉Python，我们要以写入模式 打开这个文件。
+    file_object.write("i love he\n")#使用写入方法write()
+    file_object.write('i love creating new games\n')#要让每个字符串都单独占一行，需要在write() 语句中包含换行符：'''
+#文件附加
+'''filename='pi_digits'
+with open(filename,'a') as file_object:#'a'为附加方法 不会清空文件
+    file_object.write('I also love read books\n')
+    file_object.write('I very like eat ice\n')'''
+
+###############练习
+'''filename='pi_digit'
+adduser=1
+while adduser:
+    line=input("请输入你的用户名为你添加到文本：")
+    print(line + '您好!')
+    if line == '#':
+        break
+    with open(filename, 'a') as file_object:
+        file_object.write(line + '\n')'''
+
+'''filename='guest.txt'
+adduser=1
+while adduser:
+    line=input('为何喜欢编程:')
+    if line=='q':
+        break
+with open(filename,'a') as file_object:
+    file_object.write(line+'\n')'''
+###########异常
+'''try:
+    print(5/0)
+except ZeroDivisionError:
+    print('你不能除以0！')'''
+
+'''print('请输入2个数字！')
+print('输入q退出')
+while True:
+    first_number=input('请输入第一个数字：')
+    if first_number=='q':
+        break
+    sencond_number=input('请输入第二个数字：')
+    if sencond_number=='q':
+        break
+    try:
+        anser=int(first_number)/int(sencond_number)
+    except ZeroDivisionError:
+        print('您不能除以0！')
+    else:
+        print(anser)'''
+'''filename='aaa'
+try:
+    with open(filename) as file_l:
+        aa=file_l.read()
+except FileNotFoundError:
+    msg='sorry,the file'+filename+'不存在'
+    print(msg)'''
+
+
+
+
+'''file_name='pi_digit'
+try:
+    with open(file_name,'rb') as file_book:#打开文件
+        js=file_book.read()#读取文件
+except FileNotFoundError:
+    msg='sorry,the file'+file_name+'不存在'#错误提醒
+else:
+    words=js.split()#方法split() 以空格为分隔符将字符串分拆成多个部分，并将这些部分都存储到一个列表中。
+    new_words=len(words)#计算words的长度
+    print('文本 '+file_name+'大概有 '+str(new_words)+'个字')'''
+
+'''def count_book(filename):
+    try:
+        with open(filename,'rb') as file_name:
+            contents=file_name.read()
+    except FileNotFoundError:
+        msg='sorry,the file'+filename+'不存在'#错误提醒
+    else:
+        words = contents.split()  # 方法split() 以空格为分隔符将字符串分拆成多个部分，并将这些部分都存储到一个列表中。
+        new_words = len(words)  # 计算words的长度
+        print('文本 ' + filename + '大概有 ' + str(new_words) + '个字')
+
+filename=['pi_digit','pi_digits']
+for files in filename:#遍历列表的文件名称
+    count_book(files)'''
