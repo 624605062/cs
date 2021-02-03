@@ -1151,3 +1151,75 @@ else:
 filename=['pi_digit','pi_digits']
 for files in filename:#遍历列表的文件名称
     count_book(files)'''
+'''def count_book(filename):
+    try:
+        with open(filename,'rb') as file_name:
+            contents=file_name.read()
+    except FileNotFoundError:
+        pass#出现错误后之间跳过
+    else:
+        words = contents.split()  # 方法split() 以空格为分隔符将字符串分拆成多个部分，并将这些部分都存储到一个列表中。
+        new_words = len(words)  # 计算words的长度
+        print('文本 ' + filename + '大概有 ' + str(new_words) + '个字')
+filename=['ccc','bbb']
+for filenames in filename:
+    count_book(filenames)'''
+#练习
+'''print('请输入2个数字：')
+addnumber=True
+while addnumber:
+    first_number=input('请输入第一个数字：')
+    if first_number=='q':
+        break
+    last_number=input('请输入第二个数字：')
+    if last_number=='q':
+        break
+    try:
+        numbers = int(first_number) + int(last_number)
+    except ValueError:
+        msg='输入类型错误！'
+        print(msg)
+    else:
+        print(numbers)'''
+
+'''filename=['txt_files/dats','txt_files/dogs']
+for files in filename:
+    try:
+        with open(files) as f_ojb:
+            yd=f_ojb.read()
+            print(yd)
+    except FileNotFoundError:
+        pass
+        #msg='未找到 '+files+'的文件！'
+       # print(msg)'''
+'''filename='txt_files/cats'
+with open(filename) as file_obj:
+    js=file_obj.read()
+    print(js)
+    word=js.count('tom')
+    print(word)'''
+
+'''import json
+number=[1,2,3,4]#创建一个列表
+filename='number.json'#创建一个json文件
+with open(filename,'w') as file_object:#打开该文件，进行写入
+    json.dump(number,file_object)#json.dump()方法将数字列表存储到文件numbers.json中。'''
+
+
+'''import json
+filename='number.json'
+with open(filename) as file_object:#打开number.json文件
+    numbers=json.load(file_object)#json.load()方法读取文件内容
+print(numbers)'''
+
+'''import json
+username=input('请输入你的用户名：')#让用户输入用户名
+filename='number.json'#写入文件的名称
+with open(filename,'w') as f_obj:#打开文件
+    json.dump(username,f_obj)#进行文件的写入
+    print(username+" 欢迎您回来！")'''
+'''import json
+filename='number.json'
+with open(filename) as f_obj:
+    username=json.load(f_obj)
+    print('欢迎您！ '+username)'''
