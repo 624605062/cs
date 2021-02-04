@@ -1223,3 +1223,73 @@ filename='number.json'
 with open(filename) as f_obj:
     username=json.load(f_obj)
     print('欢迎您！ '+username)'''
+
+'''import  json
+filename='number.json'
+try:
+    with open(filename) as f_obj:
+        username=json.load(f_obj)
+except FileNotFoundError:
+    username=input('请输入你的用户名：')
+    with open(filename,'w') as f_obj:
+        json.dump(username,f_obj)
+        print('欢迎您回来！'+username)
+else:
+    print('欢迎您 '+username)'''
+
+''''import json
+def greet_user():
+    filename='username.json'
+    try:
+        with open(filename) as f_ojb:
+            username=json.load(f_ojb)
+    except FileNotFoundError:
+        username= input('请输入你的用户名：')
+        with open(filename, 'w') as f_obj:
+            json.dump(username, f_obj)
+            print('欢迎您回来！' + username)
+    else:
+        print('欢迎！ '+username)
+greet_user()'''
+
+
+##########练习
+'''import json
+def get_number():
+    filename='number.json'
+    try:
+        with open(filename,'w') as f_obj:
+            numbers=input('请输入你喜欢的数字：')
+            json.dump(numbers,f_obj)
+    except FileNotFoundError:
+        pass
+    else:
+        print('载入成功！')
+def read_number():
+    filename='number.json'
+    try:
+        with open(filename) as f_ojb:
+            number=json.load(f_ojb)
+            print('你最喜欢的数字是：'+str(number))
+    except FileNotFoundError:
+        pass
+
+
+#get_number()
+read_number()'''
+'''import json
+def get_number():
+    filename='js.json'
+    try:
+        with open (filename) as f_obj:
+            number=json.load(f_obj)
+            print('你最喜欢的数字是：'+str(number))
+    except FileNotFoundError:
+        with open(filename, 'w') as f_obj:
+            numbers = input('请输入你喜欢的数字：')
+            json.dump(numbers, f_obj)
+            print('成功！')
+get_number()'''
+
+
+
