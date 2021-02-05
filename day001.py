@@ -1291,5 +1291,35 @@ def get_number():
             print('成功！')
 get_number()'''
 
+############测试代码
+
+
+'''def get_fromatted_name(first,last):
+    full_name=first+' '+last
+    return full_name.title()
+print('输入q进行退出！')
+while True:
+    first=input('请输入你的姓：')
+    if first=='q':
+        break
+    last=input('请输入你的名：')
+    if last=='q':
+        break
+    from_name=get_fromatted_name(first,last)
+    print('你的名字是：'+from_name)'''
+'''import unittest
+from name_function import get_fromatted_name#导入该函数
+class NameTestCase(unittest.TestCase):#创建一个类 必须继承unittest.TestCase类
+    """测试get_fromatted_name方法"""
+    def test_first_last_name(self):#测试类包含一个方法
+        fromatted_name=get_fromatted_name('long','wenjie')#调用函数方法
+        self.assertEqual(fromatted_name,'long wenjie')#调用assertEqual()断言方法，并向它传递formatted_name 和'Janis Joplin'
+        """代码行self.assertEqual(formatted_name, 'Janis Joplin') 的意思是
+说：“将formatted_name 的值同字符串'Janis Joplin' 进行比较，如果它们相等，就万事大吉，如果它们不相等，跟我说一声！”"""
+    def test_first_last_middle_name(self):
+        fromatted_name=get_fromatted_name('long','wen','jie')
+        self.assertEqual(fromatted_name,'long wen jie')
+unittest.main()'''
+#########练习
 
 
