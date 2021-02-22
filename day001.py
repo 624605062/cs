@@ -1306,8 +1306,8 @@ while True:
     if last=='q':
         break
     from_name=get_fromatted_name(first,last)
-    print('你的名字是：'+from_name)'''
-'''import unittest
+    print('你的名字是：'+from_name)
+import unittest
 from name_function import get_fromatted_name#导入该函数
 class NameTestCase(unittest.TestCase):#创建一个类 必须继承unittest.TestCase类
     """测试get_fromatted_name方法"""
@@ -1321,5 +1321,31 @@ class NameTestCase(unittest.TestCase):#创建一个类 必须继承unittest.Test
         self.assertEqual(fromatted_name,'long wen jie')
 unittest.main()'''
 #########练习
+'''def city_s(city,country):
+    citys=str(city)+','+str(country)
+    print(citys)
+city_s('nanchnag','china')'''
+'''import unittest
+from day002 import city_s
+class cityTest(unittest.TestCase):
+    def test_city_country(self):
+        ourcity=city_s('nanchang','china','6')
+        self.assertEqual(ourcity,'nanchang,china- population6')
+unittest.main()'''
+
+'''from day002 import AnonymousSurvey
+question=' "What language did you first learn to speak?'
+my_survey=AnonymousSurvey(question)
+my_survey.show_question()
+print("Enter 'q' at any time to quit.\n")
+while True:
+    response = input("Language: ")
+    if response == 'q':
+        break
+    my_survey.store_response(response)'''
+
+
+
+
 
 
