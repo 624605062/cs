@@ -1,5 +1,11 @@
 import pytest
+import smtplib
 @pytest.fixture(scope='module')
+def smtp():
+    with smtplib.SMTP('smtp.gmail.com') as smtp
+        yield  smtp
+def smtp_connection(request):
+    smtp_connection()
 def open():
     print('打开浏览器，并且打开百度')
     yield
