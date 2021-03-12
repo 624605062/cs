@@ -1,12 +1,24 @@
 import pytest
-import smtplib
-@pytest.fixture(scope='module')
-def smtp():
-    with smtplib.SMTP('smtp.gmail.com') as smtp
-        yield  smtp
-def smtp_connection(request):
-    smtp_connection()
-def open():
+@pytest.fixture(scope='module',autouse=True)
+def start(request):
+    print('\n----开始执行module--------')
+    print('module   :%s' % request.module.__name__)
+    print('---启动浏览器--')
+    yield
+    print('-----结束测试----')
+@pytest.fixture(scope='function',autouse=True)
+def open_home(request):
+    print('function:%s\n------回到首页----'% request.function.__name__)
+def test_01(self)
+    print('---用例01----')
+def test_02(self)
+    print('---用例02---')
+if __name__ == '__main__':
+    pytest.main(['-s','test_03.py'])
+
+
+
+'''def open():
     print('打开浏览器，并且打开百度')
     yield
     print('执行teardown')
@@ -18,4 +30,4 @@ def test_s2(open):#不传login
 def test_s3(open):
     print('用例3，登录之后其他动作333')
 if __name__ == '__main__':
-    pytest.main(['-s','test_03.py'])
+    pytest.main(['-s','test_03.py'])'''

@@ -19,7 +19,7 @@ sleep(5)
 #进入滑块的验证
 huakuai=driver.find_element_by_class_name('slider')#获取滑块的位置
 ActionChains(driver).click_and_hold(huakuai).perform()#鼠标点击圆球不松开
-ActionChains(driver).move_by_offset(xoffset=250,yoffset=0).perform()#将滑块到相对起点位置的最右边
+ActionChains(driver).move_by_offset(xoffset=270,yoffset=0).perform()#将滑块到相对起点位置的最右边
 time.sleep(0.4)
 driver.save_screenshot('D:\quekou.png')#保存包含滑块和缺口的页面截图
 ActionChains(driver).release(huakuai).perform()#放开滑块
@@ -35,8 +35,8 @@ def match_source(image):
     #通过像素差遍历匹配本地原图
     for i in list:
        #本人电脑原图与缺口图对应滑块图片横坐标相同，纵坐标原图比缺口图大88px，可根据实际情况修改
-        pixel1=image.getpixel((868,340))
-        pixel2=i.getpixel((868,428))
+        pixel1=image.getpixel(310,155)
+        pixel2=i.getpixel((310,42))
         #pixel[0]代表R值，pixel[1]代表G值，pixel[2]代表B值
         if abs(pixel1[0]-pixel2[0])<5:
            return i
@@ -44,12 +44,12 @@ def match_source(image):
 # 获取缺口位置
 visualstack=get_diff_location(sourceimg,quekouimg)
 # 获取移动距离loc，827为滑块起点位置
-loc=visualstack-827
+loc=visualstack-40
 # 计算滑块位移距离
 def get_diff_location(image1,image2):
     #（825,1082）（335,463）为滑块图片区域，可根据实际情况修改
-    for i in range(825,1082):
-        for j in range(335,463):
+    for i in range(310,155):
+        for j in range(310,42):
             #遍历原图与缺口图像素值寻找缺口位置
             if is_similar(image1,image2,i,j)==False:
                return i
