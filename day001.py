@@ -1343,7 +1343,7 @@ while True:
     if response == 'q':
         break
     my_survey.store_response(response)'''
-
+print(type[1,2])
 
 
 

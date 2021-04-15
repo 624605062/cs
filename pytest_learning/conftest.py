@@ -1,15 +1,13 @@
 import pytest
-from selenium import webdriver
-import time
-driver=webdriver.Chrome()
-@pytest.fixture(scope='module')
-def Start():
-    global driver
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    driver.get('http://171.34.197.243:8082/ZHHB/page/login.html')
-    driver.find_element_by_id('admin').send_keys('superstart')
-    driver.find_element_by_id('password').send_keys('yshb@123..')
-    logins = driver.find_element_by_xpath('/html/body/div/div[5]/div[4]/div')
-    logins.click()
-    time.sleep(2)
+'''def pytest_addoption(parser):
+    parser.addoption(
+        "--cmdopt", action="store", default="type1", help="myoption: type1 or type2"
+    )
+@pytest.fixture
+def cmdopt(request):
+    return request.config.getoption("--cmdopt")'''
+@pytest.fixture(scope="session")
+def first():
+    print("\n 获取用户名,scope 为 session 级别多个.py 模块只运行一次")
+    a = "yoyo"
+    return a
