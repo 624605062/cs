@@ -234,8 +234,20 @@ class TestCase():
     def test_2(self, first):#用例传 fixture
         print("测试账号：%s" % first)
         assert first == "yoyo"'''
-def test_1(first):#用例传 fixture
+'''def test_1(first):#用例传 fixture
     print("测试账号：%s" % first)
-    assert first == "yoyo"
+    assert first == "yoyo"'''
+@pytest.fixture(scope='module',autouse=True)
+def start():
+    print('\n开始执行')
+    yield
+    print('\关闭执行')
+@pytest.fixture(scope='function',autouse=True)
+def open_home():
+    print('\回到首页')
+def test_01():
+    print('用例1')
+def test_02():
+    print('用例2')
 if __name__ == '__main__':
     pytest.main(['-s','test_04.py'])
